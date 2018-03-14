@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222498294996041514}
   - component: {fileID: 114892193062637782}
   - component: {fileID: 114889073325349886}
+  - component: {fileID: 114230298613765778}
   m_Layer: 5
   m_Name: GridSpaceButton
   m_TagString: Untagged
@@ -46,6 +47,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114230298613765778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1364273172004784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8071115be902e4cae20db6bbd5da93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 114889073325349886}
+  buttonText: {fileID: 114291164552300970}
+  playerSide: X
 --- !u!114 &114291164552300970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,7 +132,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114892193062637782}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114230298613765778}
+        m_MethodName: SetSpace
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114892193062637782
